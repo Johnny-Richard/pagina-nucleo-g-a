@@ -16,11 +16,18 @@
 <body>
   <header id="page-top">
     <nav class="menu">
-      <div class="menu__hamburguer" id="hamburguer">
+      <!-- Ícone do menu hambúrguer -->
+      <div class="menu__hamburguer" id="hamburguer" aria-label="Abrir menu">
         <i class="fa fa-bars"></i>
-     </div>
+      </div>
+
+      <!-- Botão "Home" sempre visível -->
+      <button class="nav__item home_nuga" id="home"><a class="item_menu" href="#page-top">
+        <i class="fa fa-home" aria-hidden="true"></i>
+      </a></button>
+
+      <!-- Lista do menu (inicialmente oculta) -->
       <ul id="menu__list">
-        <li class="nav__item home_nuga"><a class="item_menu" href="#page-top"> <i class="fa fa-home" aria-hidden="true"></i> </a></li>  
         <li class="nav__item"><a class="item_menu" href="#historia">História</a></li>
         <li class="nav__item"><a class="item_menu" href="#atividades">Atividades</a></li>
         <li class="nav__item"><a class="item_menu" href="#missao-valores">Missão</a></li>
