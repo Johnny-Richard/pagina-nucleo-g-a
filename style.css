@@ -1,32 +1,38 @@
-
+/* Reseta algumas configurações padrões */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
+/* Estilos gerais do body */
 body {
-    background-color: rgb(220, 255, 255);
-    scroll-behavior: smooth;
+    background-color: white;
     font-family: Arial, sans-serif;
     font-size: 16px;
-    margin: 0;
-    padding: 0;
+    scroll-behavior: smooth;
 }
 
+/* Estilos do menu de navegação */
 .menu {
     display: flex;
-    gap: 30px;
-    height: 50px;
     justify-content: center;
     align-items: center;
     background-color: black;
     padding: 10px;
-    max-width: 100%;
 }
 
+.menu__hamburguer {
+    display: none; /* Esconde inicialmente */
+    cursor: pointer;
+    font-size: 30px;
+    color: white;
+}
+
+/* Estilos para os itens do menu */
 ul {
     display: flex;
+    gap: 30px;
 }
 
 .nav__item {
@@ -49,13 +55,13 @@ ul {
     list-style-type: none;
 }
 
+/* Animação para o banner */
 @keyframes moverImagem {
     0% { transform: translateY(0); }
     50% { transform: translateY(30px); }
     100% { transform: translateY(0); }
 }
-
-.imagem-p {
+.imagem-banner {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -63,13 +69,16 @@ ul {
     background-color: white;
     border-top: 4px solid black;
     border-bottom: 4px solid black;
+    min-height: 100vh;
 }
 
-.logo {
+.banner {
     animation: moverImagem 3s infinite alternate ease-in-out;
     max-width: 100%;
     height: auto;
 }
+
+/* Estilos das seções */
 
 .section {
     display: flex;
@@ -80,6 +89,10 @@ ul {
     background-color: white;
     border-top: 4px solid black;
     border-bottom: 4px solid black;
+}
+
+.section:not(#contato) {
+    min-height: 100vh;
 }
 
 .conteudo-section {
@@ -95,6 +108,7 @@ ul {
     padding: 10px;
 }
 
+/* Estilos do título */
 h2 {
     text-align: center;
     font-size: 28px;
@@ -103,7 +117,9 @@ h2 {
     margin-bottom: 20px;
 }
 
-.logo_nuga {
+/* home fixo no topo */
+
+.home_nuga {
     position: fixed;
     top: 10px;
     left: 20px;
@@ -111,32 +127,81 @@ h2 {
     padding: 5px 10px;
     border: 2px solid black;
     font-size: large;
+    z-index: 10; /* Garante que a home fique visível sobre outros elementos */
 }
 
-.logo_nuga a {
+.home_nuga a {
     color: black;
     text-decoration: none;
 }
 
+/* Estilos para os botões de redes sociais */
+.social-media-buttons {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.social-media-buttons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 55px;
+    height: 50px;
+    background-color: #fff;
+    font-size: 1.25rem;
+    border-radius: 10px;
+    text-decoration: none;
+    color: #1d1d1d;
+}
+
+#valores {
+    margin-top: 10px;
+}
+
+/* Estilo para o rodapé */
+#cont-contato {
+    font-size: 12px;
+}
+
+.copy {
+    font-size: 10px;
+}
+
+/* Media Queries para telas menores */
+/* Menu em telas pequenas */
 @media (max-width: 768px) {
     .menu {
-        display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 10px;
-        height: auto;
+        position: relative;
     }
 
-    ul {
-        display: flex;
+    #menu__list {
+        display: none; /* Esconde o menu inicialmente */
         flex-direction: column;
-    }
-    .conteudo-section {
+        gap: 15px;
+        padding: 20px;
         width: 100%;
-        padding: 15px;
+        text-align: center;
     }
 
-    .imagem-p {
-        padding: 30px 0;
+    .menu__hamburguer {
+        display: block; /* Mostra o ícone do menu hambúrguer */
+        cursor: pointer;
+    }
+
+    /* Exibe o menu quando a classe 'show' é adicionada */
+    #menu__list.show {
+        display: flex;
+    }
+
+    /* Estilos para os itens do menu */
+    ul {
+        flex-direction: column;
+        gap: 10px;
     }
 }
+

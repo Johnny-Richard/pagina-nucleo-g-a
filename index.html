@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +8,6 @@
   <meta name="author" content="Johnny Richard">
   <title>Nucleo Os Guardioes do Amor</title>
   <link rel="stylesheet" href="reset.css">
-  <link rel="preload" href="https://fonts.googleapis.com/css?family=Roboto&display=swap" as="style">
   <link rel="shortcut icon" href="./src/assets/icons/nucleo logo fundo branco.jpg" type="image/x-icon" />
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
@@ -17,19 +16,23 @@
 <body>
   <header id="page-top">
     <nav class="menu">
-      <ul>
-        <li class="nav__item logo_nuga"><a class="item_menu" href="#page-top"> <i class="fa fa-home" aria-hidden="true"></i> </a></li>  
+      <div class="menu__hamburguer" id="hamburguer">
+        <i class="fa fa-bars"></i>
+     </div>
+      <ul id="menu__list">
+        <li class="nav__item home_nuga"><a class="item_menu" href="#page-top"> <i class="fa fa-home" aria-hidden="true"></i> </a></li>  
         <li class="nav__item"><a class="item_menu" href="#historia">História</a></li>
         <li class="nav__item"><a class="item_menu" href="#atividades">Atividades</a></li>
+        <li class="nav__item"><a class="item_menu" href="#missao-valores">Missão</a></li>
         <li class="nav__item"><a class="item_menu" href="#contato">Contato</a></li>
       </ul>
     </nav>
   </header>
   <main>
-    <div class="imagem-p"><img class="logo" src="./src/assets/icons/nucleo logo.png" alt="logo Nucleo"></div>
+    <section class="imagem-banner"><img class="banner" src="./src/assets/icons/nucleo logo.png" alt="Banner_Nucleo"></section>
     
-    <section class="section">
-      <div class="conteudo__section" id="historia"><h2>História</h2> 
+    <section class="section" id="historia">
+      <div class="conteudo__section" ><h2>História</h2> 
       <div class="conteudo-section">
         <p>O <strong>Núcleo Os Guardiões do Amor</strong> foi fundado em <strong>10 de janeiro de 1994</strong>, na cidade de <strong>São Carlos - SP</strong>, com o objetivo de realizar ações filantrópicas para a população carente, além de oferecer amparo espiritual por meio de atividades espiritualistas, independentemente de religião, raça ou classe social.</p>
 
@@ -74,21 +77,53 @@
       </div></div>
     </section>
     
+    <section class="section" id="missao-valores">
+      <div class="conteudo__section" id="missao">
+        <h2>Missão</h2>
+        <div class="conteudo-section">
+          <p>Promover a solidariedade e o amparo às pessoas em situação de vulnerabilidade por meio de ações filantrópicas, espirituais e sociais.</p> <p>Buscamos oferecer acolhimento, apoio e oportunidades para fortalecer laços comunitários e transformar vidas com amor e respeito.</p>
+        </div>
+      </div>
+    
+      <div class="conteudo__section" id="valores">
+        <h2>Valores</h2>
+        <div class="conteudo-section">
+          <p><strong>Solidariedade:</strong> Ajudamos aqueles que mais precisam, oferecendo suporte material, emocional e espiritual.</p>
+          <p><strong>Respeito:</strong> Tratamos cada pessoa com dignidade, empatia e compreensão, independentemente de sua origem, crença ou condição.</p>
+          <p><strong>Compromisso Social:</strong> Atuamos ativamente na construção de uma sociedade mais justa e inclusiva.</p>
+          <p><strong>Espiritualidade:</strong> Independente da fé de cada um, promovemos o acolhimento e o fortalecimento espiritual como ferramenta de transformação.</p>
+          <p><strong>Ética e Transparência:</strong> Agimos com responsabilidade e honestidade em todas as nossas atividades e relações.</p>
+          </div>
+      </div>
+    </section>
 
   </main>
   <footer>
     <section class="section" id="contato">
       <div class="conteudo__section"> <h2>Contato</h2>
-        <div class="conteudo-section">
+        <div class="conteudo-section" id="cont-contato">
           <strong>E-mail:</strong> guardioesdoamor@hotmail.com <br><br>
           
           <strong>Telefone:</strong> (16) 3368-3964 <br><br>
 
-          <strong>Chave pix para doações:</strong> #@Ad2321-322142eda443
-          <p>&copy; 2025 Núcleo G.A - Todos os direitos reservados.</p>
+          <strong>Pix para doações:</strong> #@Ad2321-322142eda443
+        
+          <div class="social-media-buttons">
+            <a href="#">
+                <i class="fa-brands fa-whatsapp"></i>
+            </a>
+            <a href="#">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="#">
+                <i class="fa-brands fa-facebook"></i>
+            </a>
+          </div>
+          <p class="copy">&copy; Este site é um projeto fictício desenvolvido apenas para fins de estudo e portfólio.</p>
+
         </div>
       </div>
-    
+
     </section>
   </footer>
   <script src="script.js"></script>
