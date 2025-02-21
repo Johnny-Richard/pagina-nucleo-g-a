@@ -11,6 +11,6 @@ hamburguer.addEventListener('click', () => {
 AOS.init({
     duration: 1000, // Duração da animação
     easing: 'ease-in-out', // Tipo de transição
-    once: true, // Animação ocorre uma vez
+    once: false, // Animação ocorre uma vez
     mirror: true, // Permite animação quando o elemento voltar à tela
   });
