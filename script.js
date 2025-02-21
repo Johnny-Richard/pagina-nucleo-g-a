@@ -7,3 +7,10 @@ hamburguer.addEventListener('click', () => {
     // Toggling da classe 'show' para exibir/ocultar o menu
     menuList.classList.toggle('show');
 });
+
+AOS.init({
+    duration: 1000, // Duração da animação
+    easing: 'ease-in-out', // Tipo de transição
+    once: true, // Animação ocorre uma vez
+    mirror: true, // Permite animação quando o elemento voltar à tela
+  });
