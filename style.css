@@ -10,6 +10,7 @@ body {
     background-color: white;
     font-family: Arial, sans-serif;
     font-size: 16px;
+    line-height: 150%;
     scroll-behavior: smooth;
 }
 
@@ -207,4 +208,5 @@ h2 {
         gap: 10px;
     }
 }
+
 
